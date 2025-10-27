@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitForge | Training Resources</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Loading Overlay (Keep for a smoother load) -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <i class="fas fa-dumbbell loader"></i>
+    </div>
+
+    <!-- Navigation Bar (Included in Hero for Z-Index simplicity) -->
+    <nav id="navbar" class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-dumbbell"></i>
+                <span>FitForge</span>
+            </div>
+            <ul id="navLinks" class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#workouts">Training Resources</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="mobileMenuToggle" class="mobile-menu-toggle">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 🦖 HERO SECTION (High Prominence T-Rex) -->
+    <section id="home" class="hero-section">
+        
+        <!-- Background Layers -->
+        <div class="hero-bg-layer layer-1"></div>
+        <div class="hero-bg-layer layer-2"></div>
+        <div class="hero-bg-layer layer-3"></div>
+        
+        <!-- Atmospheric Effects -->
+        <div class="fog-container">
+            <div class="fog fog-1"></div>
+            <div class="fog fog-2"></div>
+            <div class="fog fog-3"></div>
+        </div>
+        
+        <!-- Vignette and Particle Canvas -->
+        <div class="vignette-overlay"></div>
+        <canvas id="particleCanvas"></canvas>
+        
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <div class="hero-wrapper">
+                <div class="hero-title">
+                    <span class="title-line">The Ultimate Fitness</span>
+                    <span class="title-line title-main">Training Resource</span>
+                </div>
+                <p class="hero-subtitle">Conquer the beast within. Access professional workout plans instantly.</p>
+                
+                <div class="hero-buttons">
+                    <a href="#workouts" class="btn btn-primary">
+                        <i class="fas fa-download"></i>
+                        Get Started Now
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        Contact Support
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- SCROLL INDICATOR REMOVED -->
+        
+    </section>
+
+    <!-- WORKOUT LIBRARY SECTION (Training Resources) -->
+    <section id="workouts" class="workout-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Training Resource Library</h2>
+                <p class="section-subtitle">Download high-quality PDF guides covering strength, cardio, and nutrition.</p>
+            </div>
+
+            <!-- Controls and Filters -->
+            <div class="controls-wrapper">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        class="search-input" 
+                        placeholder="Search programs..."
+                        autocomplete="off"
+                    >
+                    <button id="clearSearch" class="clear-search" style="display: none;">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <button id="downloadAllBtn" class="btn-download-all">
+                    <i class="fas fa-cloud-download-alt"></i> Download All
+                </button>
+            </div>
+            
+            <div class="filter-tags">
+                <button class="filter-tag active" data-category="all">All Resources</button>
+                <button class="filter-tag" data-category="strength">Strength</button>
+                <button class="filter-tag" data-category="cardio">Cardio</button>
+                <button class="filter-tag" data-category="nutrition">Nutrition</button>
+                <button class="filter-tag" data-category="bodyweight">Bodyweight</button>
+                <button class="filter-tag" data-category="flexibility">Flexibility</button>
+            </div>
+
+            <!-- PDF Grid (Live Content) -->
+            <div id="pdfGrid" class="pdf-grid">
+                <!-- PDF cards are rendered here by JavaScript -->
+            </div>
+            
+            <!-- No Results Message -->
+            <div id="noResults" class="no-results" style="display: none;">
+                <i class="fas fa-box-open"></i>
+                <h3>No results found</h3>
+                <p>Try adjusting your search criteria or filters.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION (Minimal) -->
+    <section id="contact" class="workout-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">We are here to support your fitness journey.</p>
+            </div>
+            <!-- Simple contact form integration goes here, currently using placeholder for structure -->
+            <div style="max-width: 600px; margin: 0 auto; text-align: center; background: #1a1a1a; padding: 40px; border-radius: 15px;">
+                <p style="margin-bottom: 20px;">For quick questions, email us at support@fitforge.com.</p>
+                <a href="mailto:support@fitforge.com" class="btn btn-primary btn-large" style="width: 100%;">
+                    <i class="fas fa-paper-plane"></i> Send Email
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <i class="fas fa-dumbbell"></i>
+                        <span>FitForge</span>
+                    </div>
+                    <p>Unleash your potential with our advanced training resources.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#workouts">Resources</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column contact-info">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> 123 Fitness Way, NY 10001</a></li>
+                        <li><a href="mailto:info@fitforge.com"><i class="fas fa-envelope"></i> info@fitforge.com</a></li>
+                        <li><a href="tel:5551234567"><i class="fas fa-phone"></i> +1 (555) 123-4567</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 FitForge. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scroll To Top Button -->
+    <button id="scrollTop" class="scroll-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
