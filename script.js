@@ -2,12 +2,12 @@
 const pdfData = [
     {
         id: 1,
-        title: "Primal Strength Protocol (Featured)",
+        title: "Legs of steel(Featured)",
         description: "The foundational 12-week program designed to build core muscle mass and maximize raw power output.",
         category: "strength",
         pages: 45,
         size: "2.3 MB",
-        url: "pdfs/primal-strength.pdf"
+        url: "https://bit.ly/47Ropkr"
     }
     // Add more PDF objects here to see the list grow live
 ];
@@ -433,4 +433,5 @@ styleSheet.textContent = `
         }
     }
 `;
+
 document.head.appendChild(styleSheet);
